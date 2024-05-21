@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="claims.component.css">
+    </head>
+    <body>
+        <div id="claims">
+            <h1> Claim Insurance </h1>
+        </div>
+        <h1>{{message | json}}</h1>
+            <div class="bootstrap-wrapper">
+                <div class="container">
+                  <div class="row" style="margin-top: 20px">
+                    <div class="col-md-6 offset-md-3">
+                      <mat-card>
+                <form (ngSubmit)="claimsNow()">
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Policy Number</mat-label>
+                  <input required [(ngModel)]="claims.policyNumber" name="policyno" id="policyno" minlength="3" matInput placeholder="Ex. 123">
+                </mat-form-field><br><br>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Mobile Number</mat-label>
+                    <input required [(ngModel)]="claims.mobileNumber" name="mobileno" id="mobileno" minlength="10" matInput placeholder="Ex. 985445576">
+                  </mat-form-field><br><br>
+                    <div id="cl">
+                        <h2>Reason to Claim Insurance</h2>
+                    <input type="radio" [(ngModel)]="claims.reason" name="reason" id="reason1" value="Natural Disaster"> &nbsp;
+                    <label>Natural Disaster</label><br><br>
+                    <input type="radio" [(ngModel)]="claims.reason" name="reason" id="reason2" value="Man-Made Disaster"> &nbsp;
+                    <label>Man-Made Disaster</label><br><br>
+                    <input type="radio" [(ngModel)]="claims.reason" name="reason" id="reason3" value="Road Accident"> &nbsp;
+                    <label>Road Accident</label><br><br>
+                    <input type="radio" [(ngModel)]="claims.reason" name="reason" id="reason4" value="Theft"> &nbsp;
+                    <label>Theft</label><br>
+                   </div><br><br>
+                
+                
+                
+                <!-- <mat-button-toggle-group name="fontStyle" [(ngModel)]="claims.reason" required aria-label="Font Style" id="buttToggle" layout="column" layout-align="space-around-center" >
+                    <mat-button-toggle name="r1" value="Natural Disaster">Natural Disaster</mat-button-toggle>
+                    <mat-button-toggle name="r2" value="Man-Made Disaster">Man-Made Disaster</mat-button-toggle>
+                    <mat-button-toggle name="r3" value="Road Accident">Road Accident</mat-button-toggle>
+                    <mat-button-toggle name="r4" value="Theft">Theft</mat-button-toggle>
+                </mat-button-toggle-group> -->
+                
+                <div class="button-row">
+                   <button mat-raised-button name="submit">Submit</button>
+                </div>
+                </form>
+            </mat-card>
+        </div>
+      </div>
+    
+    <!--<div class="mt-5">
+      <table class="table table-bordered">
+        <thead class="thead">
+          <tr>
+            <th>ClaimId</th>
+            <th>Amount</th>
+            <th>Approval</th>
+            <th>Date</th>
+            <th>Mobile No</th>
+            <th>Policy No</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let claims of claimsDetails">
+              <td>{{claims.claimId}}</td>
+              <td>{{claims.amount}}</td>
+              <td>{{claims.approval}}</td>
+              <td>{{claims.date}}</td>
+              <td>{{claims.mobileNumber}}</td>
+              <td>{{claims.policyNumber}}</td>
+              <td>{{claims.reason}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>    
+</body>
+</html> -->
+

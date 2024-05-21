@@ -1,0 +1,108 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+/>
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+/>
+<form (ngSubmit)="paymentSubmit()">
+<div class="container p-0">
+  <div class="card px-4">
+    <p class="h8 py-3">Payment Details</p>
+    <div class="row gx-3">
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Your Name</p>
+          <input
+          
+            class="form-control mb-3"
+            type="text"
+            
+            placeholder="Name"
+            value=""
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Pay Amount</p>
+          <input
+            class="form-control mb-3"
+            [(ngModel)]="payment.paymentAmount"
+            name="amount"
+            type="text"
+            placeholder="Enter amount"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Date</p>
+          <input
+            class="form-control mb-3"
+            [(ngModel)]="payment.paymentDate"
+            name="date"
+            type="date"
+            placeholder="1234 5678 435678"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1"> payment Description</p>
+          <input
+            class="form-control mb-3"
+            [(ngModel)]="payment.paymentDescription"
+            name="date"
+            type="text"
+          
+          />
+        </div>
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Card Number</p>
+          <input
+            class="form-control mb-3"
+            type="text"
+            placeholder="1234 5678 435678"
+          />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Expiry</p>
+          <input class="form-control mb-3" type="text" placeholder="MM/YYYY" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">CVV</p>
+          <input
+            class="form-control mb-3 pt-2"
+            type="password"
+            placeholder="***"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="container text-center" >
+
+          <button type="submit" mat-raised-button color="primary" >Submit</button>
+          
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</form>

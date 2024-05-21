@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="admin-dashboard.component.css">
+    </head>
+    <body>
+    
+    <div class="mt-5">
+      <table class="table table-bordered">
+        <thead class="thead">
+          <tr>
+            <th>ClaimId</th>
+            <th>Date</th>
+            <th>Approval</th>
+            <th>Mobile No</th>
+            <th>Policy No</th>
+            <th>Reason</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let claims of claimsDetails">
+              <td>{{claims.claimId}}</td>
+              <td>{{claims.date}}</td>
+              <td>{{claims.approval}} </td>
+              <td>{{claims.mobileNumber}}</td>
+              <td>{{claims.policyNumber}}</td>
+              <td>{{claims.reason}},</td>
+               
+          <!-- Approve button -->
+          <button type="button" class="btn btn-warning" (click)="approveClaim(claims.claimId)" style="width:50%;text-align:center;padding:5px 0 5px 0;cursor:pointer">Approve</button>
+
+          <!-- Delete button -->
+          <button type="button" class="btn btn-success" (click)="deleteClaim(claims.claimId)" style="width:50%;text-align:center;padding:5px 0 5px 0;cursor:pointer">Delete</button>
+
+            </tr>
+        </tbody>
+      </table>
+  </div>    
+</body>
+</html>
+

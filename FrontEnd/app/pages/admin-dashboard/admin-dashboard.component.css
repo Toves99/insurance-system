@@ -1,0 +1,49 @@
+#claims{
+    height:60px;
+    width:60%;
+    background-color: #0047AB;
+    margin:auto;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding-top: 13px
+}
+#claims1{
+    height:580px;
+    width:500px;
+    background-color: #D3D3D3 ;
+    margin:auto;
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 80px;
+}
+.form {
+    min-width: 150px;
+    max-width: 550px;
+    width: 100%;
+    margin-left: 30px;
+    padding: 35px;
+  }
+  
+  .full-width {
+    width: 100%;
+   
+  }
+  
+  
+  .button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  
+  
+  #cl{
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .button-row {
+    display: table-cell;
+    width: 490px;
+    padding-left: 200px
+  }
